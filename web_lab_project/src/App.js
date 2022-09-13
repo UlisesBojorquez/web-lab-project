@@ -1,16 +1,10 @@
-import { Navbar, Footer, Home, Census, Hospital, Hospitals, MedicalEquipment, Medicines } from './Components';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { Footer, Home, Census, Hospital, Hospitals, MedicalEquipment, Medicines } from './Components';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className='w-full h-[100vh] font-Poppins flex flex-col justify-start' >
-
-
-      {/* Header / Navbar */}
-      <Navbar />
-
+    <div className='w-full h-[100vh] font-Poppins flex flex-col justify-start bg-blue10' >
       {/* Content */}
-      <section>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home/>} />
@@ -22,7 +16,6 @@ function App() {
             <Route path='/Censo' element={<Census/>} />
           </Routes>
         </BrowserRouter>
-      </section>
 
       {/* Footer */}
       <Footer />
