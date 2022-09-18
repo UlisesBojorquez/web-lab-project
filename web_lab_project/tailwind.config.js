@@ -25,6 +25,15 @@ module.exports = {
       },
       fontFamily:{
         Poppins: ['Poppins','sans-serif']
+      },
+      animation:{
+        'animation-button': 'scale-up-center 0.4s ease-in-out infinite'
+      },
+      keyframes:{
+        'scale-up-center':{
+          '0%': { transform: 'scale(1)'},
+          '100%': {transform: 'scale(1.1)'}
+        }
       }
     },
     screens: {
@@ -36,5 +45,7 @@ module.exports = {
       'xl': "1700px",
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }
