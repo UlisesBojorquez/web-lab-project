@@ -16,7 +16,7 @@ const HospitalSection = ({title, data, slider}) => {
 
     return (
     <div className='flex flex-col gap-4'>
-        <p className='text-xl font-medium underline underline-offset-8 text-blue01'>{title}</p>
+        <p className='text-xl font-medium underline underline-offset-8 text-blue01 pl-3'>{title}</p>
 
         <div className='relative flex items-center'>
             <MdChevronLeft onClick={slideLeft} size={40} className='opacity-50 hover:opacity-100 cursor-pointer hover:scale-125 ease-in-out duration-200' />
