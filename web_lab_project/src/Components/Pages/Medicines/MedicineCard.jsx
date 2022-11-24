@@ -55,7 +55,7 @@ const HospitalCard = ({medicine}) => {
         <div 
         id='image' 
         className='w-full '>
-            <img src={medicine.image} alt='hospital' className='w-full h-full object-cover rounded-tl-md rounded-bl-md' /> 
+            <img src={medicine.image} alt='medicamento' className='w-full h-full object-cover rounded-tl-md rounded-bl-md' /> 
         </div>
 
         <div 
