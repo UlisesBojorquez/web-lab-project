@@ -46,7 +46,7 @@ import medicineImage from '../Assets/medicineImage.jpg'
         "name": "Carbamazepina",
         "category": "ANTIEPILEPTICOS",
         "count": 6,
-        "status": "Disponible",
+        "status": "No disponible",
         "image": medicineImage,
         "ubication": "ITESM",
         "direction": "Av. Ramon corona"
@@ -56,7 +56,7 @@ import medicineImage from '../Assets/medicineImage.jpg'
         "name": "Amoxicilina",
         "category": "ANTIBIOTICO BETALACTAMICO",
         "count": 1124,
-        "status": "Disponible",
+        "status": "En camino",
         "image": medicineImage,
         "ubication": "ITESM",
         "direction": "Av. Ramon corona"

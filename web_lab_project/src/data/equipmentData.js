@@ -18,7 +18,7 @@ export const equipmentData =
         "category": "Primeros auxilios",
         "description": "Gasa simple",
         "count": 187,
-        "status": "Disponible",
+        "status": "En camino",
         "image": equipment,
         "ubication": "ITESM",
         "direction": "Ramon Corona"

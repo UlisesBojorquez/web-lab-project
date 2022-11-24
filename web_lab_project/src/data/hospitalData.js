@@ -18,14 +18,14 @@ export const hospitalData = [
         name: 'San Javier',
         ubication: 'Zapopan, Jalisco',
         direction: 'Av. Lopez Mateos #554',
-        status: true,
+        status: false,
         image: hospitalImage
     },
     {
         name: 'Hospital MIT',
         ubication: 'Zapopan, Jalisco',
         direction: 'Av. Juan Gil Preciado #452',
-        status: true,
+        status: false,
         image: hospitalImage
     },
     {

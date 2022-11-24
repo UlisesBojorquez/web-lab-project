@@ -1,18 +1,37 @@
 import React, { useState } from 'react'
 import { estados } from '../../../data/estados'
 import { hospitalData } from '../../../data/hospitalData'
+import HospitalCard from './HospitalCard'
 import HospitalSection from './HospitalSection'
 
 const Hospitals = () => {
   const [answer, setAnswer] = useState(false);
   const [searchValue, setSearchValue] = useState('');
+  const [hospitals, setHospitals] = useState(hospitalData)
 
-  const searchAction = () => {
-    console.log('Buscar hospitales con '+ searchValue)
-    
+
+  const searchAction = () => {    
     if(searchValue === ''){
+      setHospitals(hospitalData)
       setAnswer(false)
     }else{
+      var filtered = [], i = hospitalData.length;
+      var reg = new RegExp("(.*)(" + searchValue.toLowerCase() + ")(.*)");
+      while (i--) {
+          if (reg.test(hospitalData[i]['name'].toLowerCase())) {
+              filtered.push(hospitalData[i]);
+              continue
+          }
+          if (reg.test(hospitalData[i]['ubication'].toLowerCase())) {
+              filtered.push(hospitalData[i]);
+              continue
+          }
+          if (reg.test(hospitalData[i]['direction'].toLowerCase())) {
+              filtered.push(hospitalData[i]);
+              continue
+          }
+      }
+      setHospitals(filtered)
       setAnswer(true)
     }
   }
@@ -66,8 +85,13 @@ const Hospitals = () => {
         {/* RESULTS */}
         {
           answer ? 
-          <div className='flex justify-center'>
-            <p>No se han encontrado resultados</p>
+          <div className='flex justify-start flex-wrap '>
+            {/* <p>No se han encontrado resultados</p> */}
+            {
+              hospitals.map((hospital) => {
+                return <HospitalCard name={hospital.name} ubication={hospital.ubication} direction={hospital.direction} status={hospital.status} image={hospital.image} />
+              })
+            }
           </div>
           :
           <div className='flex flex-col gap-4'>
