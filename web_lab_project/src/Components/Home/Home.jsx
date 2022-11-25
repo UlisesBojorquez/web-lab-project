@@ -12,7 +12,6 @@ const Home = () => {
         <Section position={'-reverse'} title={'Censo'} type={'census'}/>
       </div>
     </div>
-    
   )
 }
 
