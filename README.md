@@ -25,4 +25,12 @@ Francisco Javier Ramos Velasco - A01636425
 * Panel solar de 5 Vcc y 160 mA
 * UNIT ELECTRONICS Bateria LiPo 3.7V 1200mAh 103040
 * Placa de carga solar con microusb CN3065
+![](/web_lab_project/src/Evidencias/rasberry.jpeg "Diseño del Rasberry")
+
+
+
+## Accesibilidad
+![](/web_lab_project/src/Evidencias/accesibility1.jpeg "Accesibilidad 1")
+![](/web_lab_project/src/Evidencias/accesibility2.jpeg "Accesibilidad 2")
+
 
