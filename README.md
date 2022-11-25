@@ -1,6 +1,6 @@
 # Hospital Radar
 
-La mejor página para buscar información sobre todos los centros de atención médica.
+Aplicación experimental que facilita la localización de hospitales cercanos a tu localidad con servidor autónomo para que tenga funcionamiento en caso de emergencias o desastres donde no se cuente con acceso a la electricidad. 
 
 ## Hecho por
 
@@ -27,7 +27,18 @@ Francisco Javier Ramos Velasco - A01636425
 * Placa de carga solar con microusb CN3065
 ![](/web_lab_project/src/Evidencias/rasberry.jpeg "Diseño del Rasberry")
 
+## Páginas
 
+**1. Home**
+![](/web_lab_project/src/Evidencias/home.jpeg "Home")
+**2. Hospitales**
+![](/web_lab_project/src/Evidencias/hospitales.jpeg "Hospitales")
+**3. Medicamentos**
+![](/web_lab_project/src/Evidencias/medicamento.jpeg "medicamento")
+**4. Equipo Médico**
+![](/web_lab_project/src/Evidencias/equipoMedico.jpeg "Equipo Medico")
+**5. Censo**
+![](/web_lab_project/src/Evidencias/censo.jpeg "Censo")
 
 ## Accesibilidad
 ![](/web_lab_project/src/Evidencias/accesibility1.jpeg "Accesibilidad 1")
