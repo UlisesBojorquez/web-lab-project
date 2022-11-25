@@ -1,104 +1,64 @@
-import medicineImage from '../Assets/medicineImage.jpg'
-
-export const medicineData = [
+import medicineImage from '../Assets/medicineImage.jpg' 
+ export const medicineData = 
+[
     {
-        name: 'Paracetamol',
-        category: 'Analgesico',
-        description: 'Medicamento para el dolor de cabeza',
-        count: 10,
-        status: 'Disponible',
-        image: medicineImage,
-        ubication: 'Zapopan, Jalisco',
-        direction: 'Hospital San Jose de la Cruz'
+        "medicineid": 1,
+        "name": "Aspirina",
+        "category": "AINES",
+        "count": 95,
+        "status": "Disponible",
+        "image": medicineImage,
+        "ubication": "ITESM",
+        "direction": "Av. Ramon corona"
     },
     {
-        name: 'Paracetamol',
-        category: 'Analgesico',
-        description: 'Medicamento para el dolor de cabeza',
-        count: 10,
-        status: 'No Disponible',
-        image: medicineImage,
-        ubication: 'Zapopan, Jalisco',
-        direction: 'Hospital San Jose de la Cruz'
+        "medicineid": 2,
+        "name": "Ibuprofeno",
+        "category": "AINES",
+        "count": 32,
+        "status": "Disponible",
+        "image": medicineImage,
+        "ubication": "ITESM",
+        "direction": "Av. Ramon corona"
     },
     {
-        name: 'Paracetamol',
-        category: 'Analgesico',
-        description: 'Medicamento para el dolor de cabeza',
-        count: 10,
-        status: 'En Camino',
-        image: medicineImage,
-        ubication: 'Zapopan, Jalisco',
-        direction: 'Hospital San Jose de la Cruz'
+        "medicineid": 3,
+        "name": "Morfina",
+        "category": "OPIOIDES",
+        "count": 1500,
+        "status": "Disponible",
+        "image": medicineImage,
+        "ubication": "ITESM",
+        "direction": "Av. Ramon corona"
     },
     {
-        name: 'Paracetamol',
-        category: 'Analgesico',
-        description: 'Medicamento para el dolor de cabeza',
-        count: 10,
-        status: 'Disponible',
-        image: medicineImage,
-        ubication: 'Zapopan, Jalisco',
-        direction: 'Hospital San Jose de la Cruz'
+        "medicineid": 4,
+        "name": "Cloroquina",
+        "category": "ANTIRREUMATICO",
+        "count": 5,
+        "status": "Disponible",
+        "image": medicineImage,
+        "ubication": "ITESM",
+        "direction": "Av. Ramon corona"
     },
     {
-        name: 'Paracetamol',
-        category: 'Analgesico',
-        description: 'Medicamento para el dolor de cabeza',
-        count: 10,
-        status: 'Disponible',
-        image: medicineImage,
-        ubication: 'Zapopan, Jalisco',
-        direction: 'Hospital San Jose de la Cruz'
+        "medicineid": 5,
+        "name": "Carbamazepina",
+        "category": "ANTIEPILEPTICOS",
+        "count": 6,
+        "status": "No disponible",
+        "image": medicineImage,
+        "ubication": "ITESM",
+        "direction": "Av. Ramon corona"
     },
     {
-        name: 'Paracetamol',
-        category: 'Analgesico',
-        description: 'Medicamento para el dolor de cabeza',
-        count: 10,
-        status: 'Disponible',
-        image: medicineImage,
-        ubication: 'Zapopan, Jalisco',
-        direction: 'Hospital San Jose de la Cruz'
-    },
-    {
-        name: 'Paracetamol',
-        category: 'Analgesico',
-        description: 'Medicamento para el dolor de cabeza',
-        count: 10,
-        status: 'Disponible',
-        image: medicineImage,
-        ubication: 'Zapopan, Jalisco',
-        direction: 'Hospital San Jose de la Cruz'
-    },
-    {
-        name: 'Paracetamol',
-        category: 'Analgesico',
-        description: 'Medicamento para el dolor de cabeza',
-        count: 10,
-        status: 'Disponible',
-        image: medicineImage,
-        ubication: 'Zapopan, Jalisco',
-        direction: 'Hospital San Jose de la Cruz'
-    },
-    {
-        name: 'Paracetamol',
-        category: 'Analgesico',
-        description: 'Medicamento para el dolor de cabeza',
-        count: 10,
-        status: 'Disponible',
-        image: medicineImage,
-        ubication: 'Zapopan, Jalisco',
-        direction: 'Hospital San Jose de la Cruz'
-    },
-    {
-        name: 'Paracetamol',
-        category: 'Analgesico',
-        description: 'Medicamento para el dolor de cabeza',
-        count: 10,
-        status: 'Disponible',
-        image: medicineImage,
-        ubication: 'Zapopan, Jalisco',
-        direction: 'Hospital San Jose de la Cruz'
-    },
+        "medicineid": 6,
+        "name": "Amoxicilina",
+        "category": "ANTIBIOTICO BETALACTAMICO",
+        "count": 1124,
+        "status": "En camino",
+        "image": medicineImage,
+        "ubication": "ITESM",
+        "direction": "Av. Ramon corona"
+    }
 ]

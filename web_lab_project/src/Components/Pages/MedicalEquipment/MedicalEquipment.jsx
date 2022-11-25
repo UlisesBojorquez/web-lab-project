@@ -1,17 +1,43 @@
 import React, { useState } from 'react';
 import MedicalEquipmentSection from './MedicalEquipmentSection';
 import { equipmentData } from '../../../data/equipmentData';
+import MedicalEquipmentCard from './MedicalEquipmentCard';
 
 const MedicalEquipment = () => {
   const [answer, setAnswer] = useState(false);
   const [searchValue, setSearchValue] = useState('');
+  const [equipments, setEquipments] = useState(equipmentData)
 
   const searchAction = () => {
-    console.log('Buscar hospitales con '+ searchValue)
-    
     if(searchValue === ''){
+      setEquipments(equipmentData)
       setAnswer(false)
     }else{
+      var filtered = [], i = equipmentData.length;
+      var reg = new RegExp("(.*)(" + searchValue.toLowerCase() + ")(.*)");
+      while (i--) {
+          if (reg.test(equipmentData[i]['name'].toLowerCase())) {
+              filtered.push(equipmentData[i]);
+              continue
+          }
+          if (reg.test(equipmentData[i]['category'].toLowerCase())) {
+              filtered.push(equipmentData[i]);
+              continue
+          }
+          if (reg.test(equipmentData[i]['description'].toLowerCase())) {
+              filtered.push(equipmentData[i]);
+              continue
+          }
+          if (reg.test(equipmentData[i]['ubication'].toLowerCase())) {
+              filtered.push(equipmentData[i]);
+              continue
+          }
+          if (reg.test(equipmentData[i]['direction'].toLowerCase())) {
+              filtered.push(equipmentData[i]);
+              continue
+          }
+      }
+      setEquipments(filtered)
       setAnswer(true)
     }
   }
@@ -52,18 +78,25 @@ const MedicalEquipment = () => {
         {/* RESULTS */}
         {
           answer ? 
-          <div className='flex justify-center'>
-            <p>No se han encontrado resultados</p>
+          <div className='flex justify-start flex-wrap '>
+            {/* <p>No se han encontrado resultados</p> */}
+            {
+              equipments.map((equipment) => {
+                return <MedicalEquipmentCard medicine={equipment} />
+              })
+            }
           </div>
           :
           <div className='flex flex-col gap-4'>
-            <MedicalEquipmentSection title={'Prótesis'} data={equipmentData} slider={'protesis'} />
+            {/* <MedicalEquipmentSection title={'Prótesis'} data={equipmentData} slider={'protesis'} />
             <MedicalEquipmentSection title={'Odontológico'} data={equipmentData} slider={'odontologico'} />
             <MedicalEquipmentSection title={'Productos higiénicos'} data={equipmentData} slider={'higienicos'} />
             <MedicalEquipmentSection title={'Material quirúrgico y de curación'} data={equipmentData} slider={'quirurgico'} />
             <MedicalEquipmentSection title={'Articulos y aparatos Ortopédicos'} data={equipmentData} slider={'ortopedicos'} />
             <MedicalEquipmentSection title={'Nebulizadores'} data={equipmentData} slider={'nebulizadores'} />
-            <MedicalEquipmentSection title={'Termómetros'} data={equipmentData} slider={'termometros'} />
+            <MedicalEquipmentSection title={'Termómetros'} data={equipmentData} slider={'termometros'} /> */}
+            <MedicalEquipmentSection title={'Articulos y aparatos Ortopédicos'} data={equipmentData} slider={'ortopedicos'} />
+            <MedicalEquipmentSection title={'Primeros Auxilios'} data={equipmentData} slider={'primeros-auxilios'} />
           </div>
         }
 

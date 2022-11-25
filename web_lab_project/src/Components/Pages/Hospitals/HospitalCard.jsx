@@ -18,6 +18,7 @@ const HospitalCard = ({name, ubication, direction, status, image}) => {
     cursor-pointer
     hover:scale-105 ease-in-out duration-300
     mr-5
+    mb-5
     whitespace-normal
     '
     onClick={() => navigate(`/Hospitales/${name}`)}

@@ -2,10 +2,9 @@ import React from 'react';
 import markerImage from '../../../Assets/marker.png';
 import direccionesImage from '../../../Assets/direcciones.png';
 
-const HospitalCard = ({medicine}) => {
+const MedicalEquipmentCard = ({medicine}) => {
 
     const status = () => {
-        console.log(medicine.status)
         switch (medicine.status) {
             
             case 'Disponible':
@@ -15,7 +14,7 @@ const HospitalCard = ({medicine}) => {
                         <p className='px-2 py-1 rounded-lg text-green-800 font-semibold'> Disponible</p>
                     </div>
                 )
-            case 'No Disponible':
+            case 'No disponible':
                 return ( 
                     <div className='w-40 flex flex-row items-center gap-2'>
                         <span className='w-3 h-3 block rounded-3xl bg-red-400 animate-pulse' />
@@ -46,6 +45,7 @@ const HospitalCard = ({medicine}) => {
     cursor-pointer
     hover:scale-105 ease-in-out duration-300
     mr-5
+    mb-5
     whitespace-normal
     '
     >
@@ -83,4 +83,4 @@ const HospitalCard = ({medicine}) => {
   )
 }
 
-export default HospitalCard
+export default MedicalEquipmentCard

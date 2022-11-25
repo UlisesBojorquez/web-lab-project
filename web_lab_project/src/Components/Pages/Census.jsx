@@ -2,14 +2,37 @@ import React, { useState } from 'react'
 import { patientsData } from '../../data/patientsData'
 
 const Census = () => {
-
   const [displayDetails, setDisplayDetails] = useState(false);
   const [details, setDetails] = useState({})
   const [searchValue, setSearchValue] = useState('');
+  const [patients, setPatients] = useState(patientsData)
 
   const searchAction = () => {
-    console.log('Buscar paciente con '+ searchValue)
-    
+    if(searchValue === ''){
+      setPatients(patientsData)
+    }else{
+      var filtered = [], i = patientsData.length;
+      var reg = new RegExp("(.*)(" + searchValue.toLowerCase() + ")(.*)");
+      while (i--) {
+          if (reg.test(patientsData[i]['name'].toLowerCase())) {
+              filtered.push(patientsData[i]);
+              continue
+          }
+          if (reg.test(patientsData[i]['hospital'].toLowerCase())) {
+              filtered.push(patientsData[i]);
+              continue
+          }
+          if (reg.test(patientsData[i]['diagnosis'].toLowerCase())) {
+              filtered.push(patientsData[i]);
+              continue
+          }
+          if (reg.test(patientsData[i]['status'].toLowerCase())) {
+              filtered.push(patientsData[i]);
+              continue
+          }
+      }
+      setPatients(filtered)
+    }
   }
 
   const onPressEnter = (e) => {
@@ -66,7 +89,7 @@ const Census = () => {
             </thead>
             <tbody>
               {
-                patientsData.map((patient, key) => (
+                patients.map((patient, key) => (
                   <tr className="bg-white border-b hover:bg-gray-50" key={key}>
                     
                     <th scope="row" className="py-4 px-6 font-medium text-gray-900 "> {patient.name} </th>
@@ -92,7 +115,7 @@ const Census = () => {
             </tbody>
         </table>
         <nav class="flex justify-between items-center p-5 bg-white" aria-label="Table navigation">
-          <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Showing <span class="font-semibold text-gray-900 dark:text-white">1-10</span> of <span class="font-semibold text-gray-900 dark:text-white">1000</span></span>
+          <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Showing <span class="font-semibold text-gray-900 dark:text-white">{`${patients.length>0 ? '1' : '0'}-${patients.length}`}</span> of <span class="font-semibold text-gray-900 dark:text-white">{`${patients.length}`}</span></span>
           <ul class="inline-flex items-center -space-x-px">
               <li>
                   <a href="#" class="block py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -101,13 +124,13 @@ const Census = () => {
                   </a>
               </li>
               <li>
-                  <a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                  <a href="#" aria-current="page" class="z-10 py-2 px-3 leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">1</a>
               </li>
               <li>
                   <a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
               </li>
               <li>
-                  <a href="#" aria-current="page" class="z-10 py-2 px-3 leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                  <a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">3</a>
               </li>
               <li>
                   <a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
