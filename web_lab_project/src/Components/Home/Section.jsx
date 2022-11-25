@@ -51,6 +51,19 @@ const Section = ({position, title, type}) => {
                 return '/Censo'
         }
     }
+
+    const MessageSection = () => {
+        switch (type) {
+            case 'hospitals':
+                return 'Aqui podrás consultar información de los centros de atención médica, ya sean cerca de ti o incluso buscar en todos los estados de la república.'
+            case 'medicines':
+                return 'Aqui podrás encontrar todas las medicinas que estén disponibles tanto cerca de ti como en cualquier estado de la república mexicana.'
+            case 'equipment':
+                return 'Aqui podrás encontrar todos los equipos médicos que estén disponibles tanto cerca de ti como en cualquier estado de la república mexicana.'
+            default:
+                return 'Podrás buscar si alguno de los pacientes en los hospitales registrar es un familiar o amigo tuyo, en caso de estarlos buscando, te facilitaremos su reencuentro buscandolo aquí.'
+        }
+    }
     
     return (
         <div className='container align-center' id="homeContainer">
@@ -61,7 +74,7 @@ const Section = ({position, title, type}) => {
                 <ImageSection/>
                 <div className='bg-blue07 rounded-md text-white flex flex-1 flex-col justify-between h-56 m-2'>
                     <div className='flex-row p-3'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed enim ad minim veniam, quis nostrud exercitation ullamco labois aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        {MessageSection()}
                     </div>
                     {/* <div className='flex-row'> */}
                         <Link to={DirectionsSection()} className="text-center text-sm p-3 m-2 font-medium text-white bg-blue03 rounded-lg border border-blue05 hover:bg-blue05 focus:ring-4 focus:outline-none focus:ring-blue09 transition-all hover:scale-105"><span>Buscar</span></Link>
