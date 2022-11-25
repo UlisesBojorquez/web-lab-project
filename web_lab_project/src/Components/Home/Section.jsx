@@ -10,9 +10,7 @@ import HospitalSection from '../Pages/Hospitals/HospitalSection'
 import MedicalEquipmentSection from '../Pages/MedicalEquipment/MedicalEquipmentSection';
 import MedicineSection from '../Pages/Medicines/MedicineSection';
 import { Link } from 'react-router-dom';
-
 const Section = ({position, title, type}) => {
-
     const MiniSection = () => {
         switch (type) {
             case 'hospitals':
@@ -25,7 +23,6 @@ const Section = ({position, title, type}) => {
                 return <div></div>
         }
     }
-
     const ImageSection = () => {
         switch (type) {
             case 'hospitals':
@@ -81,14 +78,14 @@ const Section = ({position, title, type}) => {
                         {/* <button type="button" class="text-sm p-3 m-2 font-medium text-white bg-blue03 rounded-lg border border-blue05 hover:bg-blue05 focus:ring-4 focus:outline-none focus:ring-blue09 transition-all hover:scale-105"><span>Buscar</span></button> */}
                     {/* </div> */}
                 </div>
-                
+
             </div>
             {/* <div className='bg-white flex'>
                 <div className='bg-blue01 text-white p-2 m-2 flex-1'>Hospitales cerca de ti</div>
             </div> */}
             <div className='bg-white flex rounded-b-md'>
                 <div className='flex flex-col'>
-                    
+                   
                     <MiniSection />
                 </div>
             </div>
